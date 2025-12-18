@@ -9,18 +9,33 @@ public class Nodo {
     ArrayList<Nodo> vecinos;
 
     Nodo(String nombre, String ip, boolean firewall, boolean vulnerable) {
-        // TODO: Realizar constructor
+        this.nombre = nombre;
+        this.ip = ip;
+        this.firewall = firewall;
+        this.vecinos = new ArrayList<>();
+        this.vulnerable = vulnerable;
+        this.comprometido = false;
     }
 
         
     void conectar(Nodo otro) {
-        // TODO: conecta este nodo con "otro" (sin duplicados)
+        this.vecinos = new ArrayList<>();
+        if (!vecinos.contains(otro))
+            vecinos.add(otro);
     }
 
     @Override
     public String toString() {
-        // TODO: devolver algo tipo:
-        // "WebServer (172.16.0.10) [VULN] [PWN]" etc.
-        return "";
+        String estat = nombre + "(" + ip + ")";
+        if (firewall) 
+            estat += "[FW]";
+
+        if (vulnerable)
+             estat += "[VULN]";
+
+        if (comprometido)
+             estat += "[PWN]";
+            
+        return estat;
     }
 }
