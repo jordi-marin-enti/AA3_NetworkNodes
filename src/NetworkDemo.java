@@ -31,3 +31,4 @@ public class NetworkDemo {
         System.out.println("Nodos aislados: " + red.nodosAislados());
     }
 }
+

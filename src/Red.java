@@ -5,19 +5,26 @@
 
         Red() {
              // TODO: Realizar constructor
+             this.nodos = new ArrayList<>();
         }
 
         void agregarNodo(Nodo n) {
             // TODO: añade nodo a la red
+            if (!nodos.contains(n));{
+                nodos.add(n);
+            }
         }
 
-        void conectar(Nodo a, Nodo b) {
+        public void conectar(Nodo a, Nodo b) {
             // TODO: conecta a <-> b (bidireccional)
+            a.conectar(b);
+            b.conectar(a);
         }
 
         
         void mostrar() {
             // TODO: imprime topología (nodo -> vecinos)
+            
         }
         
         void resetCompromisos() {
