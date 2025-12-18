@@ -32,6 +32,9 @@
         
         void resetCompromisos() {
             // TODO: poner comprometido=false a todos los nodos
+            for (Nodo n : nodos) {
+                n.comprometido = false;
+            }
         }
 
         void escanearDesde(Nodo origen) {
@@ -54,7 +57,6 @@
         }
 
         String listarVecinosDe(Nodo n) {
-            // Listar vecinos (iterar vecinos)
             return "";
         }
 
