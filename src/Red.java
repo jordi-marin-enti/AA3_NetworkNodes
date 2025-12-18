@@ -24,7 +24,10 @@
         
         void mostrar() {
             // TODO: imprime topología (nodo -> vecinos)
-            
+            for (Nodo n : nodos){
+                System.out.println(n.toString()+ " --> ");
+                System.out.println(listarVecinosDe(n));
+            }
         }
         
         void resetCompromisos() {
