@@ -26,8 +26,16 @@ public class Nodo {
 
     @Override
     public String toString() {
-        // TODO: devolver algo tipo:
-        // "WebServer (172.16.0.10) [VULN] [PWN]" etc.
-        return "";
+        String estat = nombre + "(" + ip + ")";
+        if (firewall) 
+            estat += "[FW]";
+
+        if (vulnerable)
+             estat += "[VULN]";
+
+        if (comprometido)
+             estat += "[PWN]";
+            
+        return estat;
     }
 }
