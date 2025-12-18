@@ -42,7 +42,9 @@
         }
 
         Nodo buscarPorIP(String ip) {
-            // Buscar por IP (iterar nodos)
+            for (Nodo n : nodos)
+                if (n.ip.equals(ip))
+                    return n;
             return null;
         }
   
